@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+*.log
+*.sqlite3
+*.db
+*.ipynb_checkpoints/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Data files
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.ods
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.pdf
+*.h5
+*.npy
+*.npz
+*.pkl
+*.joblib
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.onnx
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# OneDrive
+*.tmp
+~$*
+
+# CatBoost training files
+catboost_info/
+
+# Streamlit cache
+.streamlit/
+
+# Environment files
+.env
+*.env
+
+# Others
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+
+# Ignore all generated plots
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.pdf
