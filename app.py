@@ -10,7 +10,8 @@ import time
 import io
 
 # Load the saved model, preprocessor, and label encoder
-model = joblib.load('final_healthcare_model_1.pkl')
+model = joblib.load('https://huggingface.co/ArmstrongM/Healthcare/blob/main/final_healthcare_model_1.pkl')
+
 preprocessor = joblib.load('preprocessor_1.pkl')
 label_encoder = joblib.load('label_encoder_1.pkl')
 
