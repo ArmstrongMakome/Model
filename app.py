@@ -8,9 +8,18 @@ import matplotlib.pyplot as plt
 import joblib
 import time
 import io
+import os
+import requests
 
-# Load the saved model, preprocessor, and label encoder
-model = joblib.load('https://huggingface.co/ArmstrongM/Healthcare/blob/main/final_healthcare_model_1.pkl')
+# Download model from Hugging Face if not present
+model_url = "https://huggingface.co/ArmstrongM/Healthcare/resolve/main/final_healthcare_model_1.pkl"
+model_path = "final_healthcare_model_1.pkl"
+if not os.path.exists(model_path):
+    response = requests.get(model_url)
+    with open(model_path, "wb") as f:
+        f.write(response.content)
+
+model = joblib.load(model_path)
 
 preprocessor = joblib.load('preprocessor_1.pkl')
 label_encoder = joblib.load('label_encoder_1.pkl')
@@ -554,4 +563,3 @@ if uploaded_file is None:
         st.write(f"Prediction Time: {prediction_time:.2f} seconds")
         st.write(f"SHAP Computation Time: {shap_time:.2f} seconds")
         st.write(f"Total Processing Time: {time.time() - start_time:.2f} seconds")
-        
